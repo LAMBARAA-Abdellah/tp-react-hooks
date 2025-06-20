@@ -54,7 +54,15 @@ Pour chaque exercice :
 _Votre réponse pour l'exercice 1 :_
 ```
 Expliquez votre solution ici
-[Ajoutez vos captures d'écran]
+#### Explication :
+Nous avons utilisé `useState` pour stocker la recherche, `useEffect` pour déclencher la mise à jour avec un délai grâce à `useDebounce`.  
+Le champ de recherche met à jour dynamiquement le `searchTerm` dans `App`, ce qui permet de filtrer les produits dans le hook `useProductSearch`.
+
+#### Capture d’écran :
+![Exercice 1](./screenshots/filter.jpg)
+
+#### Difficulté :
+La principale difficulté était de bien faire remonter le terme recherché à travers les composants, et de bien passer `searchTerm` au hook.
 ```
 
 ### Exercice 2 : Context et Internationalisation
