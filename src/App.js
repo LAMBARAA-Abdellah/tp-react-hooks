@@ -2,15 +2,16 @@ import React, { createContext, useState } from 'react';
 import ProductList from './components/ProductList';
 import ProductSearch from './components/ProductSearch';
 import ThemeToggle from './components/ThemeToggle';
+import useLocalStorage from './hooks/useLocalStorage';
 
 // TODO: Exercice 2.1 - Créer le LanguageContext
 export const ThemeContext = createContext();
 export const LanguageContext = createContext();
 
 const App = () => {
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useLocalStorage('theme', false); 
   const [searchTerm, setSearchTerm] = useState(''); // Exercice 1.1 - Ajouter l'état pour la recherche
-  const [language, setLanguage] = useState('fr'); // Exercice 2.2 - Ajouter l'état pour la langue
+  const [language, setLanguage] = useLocalStorage('lang', 'fr');  //  Exercice 3.2 - Sauvegarde de la langue
   const titleText = language === 'en' ? 'Product Catalog' : 'Catalogue de Produits';
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}> {/* Exercice 2.1 - Wrapper avec LanguageContext.Provider */}
