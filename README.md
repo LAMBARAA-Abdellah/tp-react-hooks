@@ -6,7 +6,7 @@ Ce TP a pour objectif de mettre en pratique l'utilisation des Hooks React (useSt
 
 1. Cloner le dépôt :
 ```bash
-git clone https://github.com/pr-daaif/tp-react-hooks.git
+git https://github.com/LAMBARAA-Abdellah/tp-react-hooks
 cd tp-react-hooks
 ```
 
@@ -52,18 +52,17 @@ Pour chaque exercice :
 - [ ] 1.3 Documenter votre solution ici
 
 _Votre réponse pour l'exercice 1 :_
-```
-Expliquez votre solution ici
-#### Explication :
-Nous avons utilisé `useState` pour stocker la recherche, `useEffect` pour déclencher la mise à jour avec un délai grâce à `useDebounce`.  
-Le champ de recherche met à jour dynamiquement le `searchTerm` dans `App`, ce qui permet de filtrer les produits dans le hook `useProductSearch`.
+🎯 **Objectif** : Ajouter un champ de recherche en temps réel avec un effet debounce.
 
-#### Capture d’écran :
-![Exercice 1](./screenshots/filter.jpg)
+✅ **Ce que j’ai fait** :
+- Utilisé `useState` pour stocker `searchTerm`
+- Créé un hook `useDebounce` pour retarder la mise à jour
+- Filtré les produits dans `useProductSearch`
 
-#### Difficulté :
-La principale difficulté était de bien faire remonter le terme recherché à travers les composants, et de bien passer `searchTerm` au hook.
-```
+📷 **Capture :**
+![Exercice 1](./captures/filter.jpg)
+
+---
 
 ### Exercice 2 : Context et Internationalisation
 #### Objectif : Gérer les préférences de langue
@@ -72,11 +71,18 @@ La principale difficulté était de bien faire remonter le terme recherché à t
 - [ ] 2.2 Ajouter le sélecteur de langue
 - [ ] 2.3 Documenter votre solution ici
 
-_Votre réponse pour l'exercice 2 :_
-```
-Expliquez votre solution ici
-[Ajoutez vos captures d'écran]
-```
+
+🎯 **Objectif** : Gérer la langue de l’interface (Français / Anglais).
+
+✅ **Ce que j’ai fait** :
+- Créé un `LanguageContext`
+- Ajouté un sélecteur de langue dans le header
+- Traduit dynamiquement les labels, boutons, titres et placeholders
+
+📷 **Capture :**
+![Exercice 2](./captures/translate.jpg)
+
+---
 
 ### Exercice 3 : Hooks Personnalisés
 #### Objectif : Créer des hooks réutilisables
@@ -85,11 +91,16 @@ Expliquez votre solution ici
 - [ ] 3.2 Créer le hook useLocalStorage
 - [ ] 3.3 Documenter votre solution ici
 
-_Votre réponse pour l'exercice 3 :_
-```
-Expliquez votre solution ici
-[Ajoutez vos captures d'écran]
-```
+🎯 **Objectif** : Créer deux hooks personnalisés : `useDebounce` et `useLocalStorage`.
+
+✅ **Ce que j’ai fait** :
+- `useDebounce` : gère la recherche avec délai
+- `useLocalStorage` : stocke la langue et le thème dans le navigateur
+
+📷 **Capture :**
+![Exercice 3](./captures/localStorage.jpg)
+
+---
 
 ### Exercice 4 : Gestion Asynchrone et Pagination
 #### Objectif : Gérer le chargement et la pagination
@@ -98,11 +109,15 @@ Expliquez votre solution ici
 - [ ] 4.2 Implémenter la pagination
 - [ ] 4.3 Documenter votre solution ici
 
-_Votre réponse pour l'exercice 4 :_
-```
-Expliquez votre solution ici
-[Ajoutez vos captures d'écran]
-```
+✅ **Ce que j’ai fait** :
+- Créé un bouton pour recharger les produits
+- Paginé les produits (3 par page)
+- Réinitialisé la page à 1 automatiquement lors d’une nouvelle recherche
+
+📷 **Capture :**
+![Exercice 4](./captures/pagination.jpg)
+
+---
 
 ## Rendu
 
